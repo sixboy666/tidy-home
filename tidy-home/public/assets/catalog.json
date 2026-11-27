@@ -1,0 +1,6 @@
+{
+  "name": "TIDY HOME",
+  "description": "Illustrated scene objects rendered as original Phaser vector artwork",
+  "items": ["Mugs", "Fruit", "Books", "Toys", "Decor", "Clothing"],
+  "palette": ["#f6efe2", "#e7b66b", "#709174", "#d99179", "#7776a6"]
+}
