@@ -1,0 +1,22 @@
+TIDY HOME — Cozy Room-Tidying Puzzle
+=====================================
+
+HOW TO PLAY (two options)
+
+OPTION A — Quickest: just open "index.html"
+  Double-click index.html. The game loads fully offline, no server needed.
+  (Works in Chrome / Edge / Firefox.)
+
+OPTION B — If your browser blocks the file (some do): use the included local server.
+  Double-click "serve.cmd". It will start a tiny local web server and open
+  the game automatically in your default browser.
+
+CONTROLS
+  - Tap / click an item to pick it up.
+  - Matching baskets fill automatically; extras land in the temporary tray.
+  - Buttons: Hint (highlight a useful item), Undo (step back), Pause (top-left).
+  - Reach every basket's target to win.
+
+Progress is saved automatically in your browser (LocalStorage).
+
+Enjoy tidying!
