@@ -1,0 +1,1 @@
+{"levels":[{"path":"/levels/level-01.json","theme":"kitchen"},{"path":"/levels/level-02.json","theme":"living"},{"path":"/levels/level-03.json","theme":"bedroom"}],"format":"Mirrors the strongly typed source catalog for offline tooling; runtime levels live in src/game/levels.ts"}
