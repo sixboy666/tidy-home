@@ -1,0 +1,70 @@
+{
+  "levels": [
+    {
+      "levelId": 1,
+      "name": "Kitchen Mess",
+      "roomTheme": "kitchen",
+      "difficulty": 1,
+      "trayCapacity": 7,
+      "baskets": [
+        { "category": "cup", "label": "Cups", "target": 2 },
+        { "category": "food", "label": "Food", "target": 2 }
+      ],
+      "items": [
+        { "id": "k1_cup_blue", "catalogKey": "cup_blue", "x": 240, "y": 560, "depth": 10, "blocks": [] },
+        { "id": "k1_cup_white", "catalogKey": "cup_white", "x": 470, "y": 700, "depth": 11, "blocks": [] },
+        { "id": "k1_apple", "catalogKey": "apple", "x": 360, "y": 820, "depth": 9, "blocks": [] },
+        { "id": "k1_bread", "catalogKey": "bread", "x": 540, "y": 900, "depth": 8, "blocks": [] },
+        { "id": "k1_plate", "catalogKey": "plate_red", "x": 300, "y": 660, "depth": 5, "blocks": [] },
+        { "id": "k1_bowl", "catalogKey": "bowl", "x": 430, "y": 600, "depth": 6, "blocks": [] }
+      ]
+    },
+    {
+      "levelId": 2,
+      "name": "Living Room Pickup",
+      "roomTheme": "living",
+      "difficulty": 2,
+      "trayCapacity": 7,
+      "baskets": [
+        { "category": "toy", "label": "Toys", "target": 2 },
+        { "category": "book", "label": "Books", "target": 2 },
+        { "category": "electronics", "label": "Gadgets", "target": 1 }
+      ],
+      "items": [
+        { "id": "k2_remote", "catalogKey": "remote", "x": 250, "y": 620, "depth": 12, "blocks": ["k2_book_red"] },
+        { "id": "k2_book_red", "catalogKey": "book_red", "x": 255, "y": 625, "depth": 8, "blocks": ["k2_toy_car"] },
+        { "id": "k2_toy_car", "catalogKey": "toy_car", "x": 260, "y": 630, "depth": 4, "blocks": [] },
+        { "id": "k2_book_green", "catalogKey": "book_green", "x": 500, "y": 760, "depth": 9, "blocks": [] },
+        { "id": "k2_toy_ball", "catalogKey": "toy_ball", "x": 420, "y": 900, "depth": 7, "blocks": [] },
+        { "id": "k2_teddy", "catalogKey": "teddy", "x": 560, "y": 560, "depth": 10, "blocks": [] },
+        { "id": "k2_magazine", "catalogKey": "magazine", "x": 330, "y": 820, "depth": 6, "blocks": [] },
+        { "id": "k2_gamepad", "catalogKey": "gamepad", "x": 470, "y": 660, "depth": 11, "blocks": [] }
+      ]
+    },
+    {
+      "levelId": 3,
+      "name": "Bedroom Overhaul",
+      "roomTheme": "bedroom",
+      "difficulty": 3,
+      "trayCapacity": 6,
+      "baskets": [
+        { "category": "cloth", "label": "Clothes", "target": 2 },
+        { "category": "shoe", "label": "Shoes", "target": 1 },
+        { "category": "toy", "label": "Toys", "target": 1 },
+        { "category": "book", "label": "Books", "target": 1 }
+      ],
+      "items": [
+        { "id": "k3_shirt", "catalogKey": "shirt", "x": 300, "y": 640, "depth": 14, "blocks": ["k3_pants"] },
+        { "id": "k3_pants", "catalogKey": "pants", "x": 305, "y": 645, "depth": 10, "blocks": ["k3_shoe"] },
+        { "id": "k3_shoe", "catalogKey": "shoe_left", "x": 310, "y": 650, "depth": 5, "blocks": [] },
+        { "id": "k3_sock", "catalogKey": "sock", "x": 500, "y": 820, "depth": 8, "blocks": [] },
+        { "id": "k3_doll", "catalogKey": "doll", "x": 460, "y": 580, "depth": 12, "blocks": ["k3_notebook"] },
+        { "id": "k3_notebook", "catalogKey": "notebook", "x": 465, "y": 585, "depth": 6, "blocks": [] },
+        { "id": "k3_alarm", "catalogKey": "alarm", "x": 560, "y": 720, "depth": 11, "blocks": [] },
+        { "id": "k3_lamp", "catalogKey": "lamp", "x": 240, "y": 800, "depth": 9, "blocks": [] },
+        { "id": "k3_box", "catalogKey": "box", "x": 380, "y": 920, "depth": 7, "blocks": [] },
+        { "id": "k3_plant", "catalogKey": "plant", "x": 540, "y": 900, "depth": 4, "blocks": [] }
+      ]
+    }
+  ]
+}
