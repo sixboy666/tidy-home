@@ -1,0 +1,12 @@
+import Phaser from 'phaser';
+export class AudioManager{
+ private context:AudioContext|null=null; private master:GainNode|null=null; sound=true;music=true;private timer:number|undefined;
+ unlock():void{if(!this.context){const Ctx=window.AudioContext;if(!Ctx)return;this.context=new Ctx();this.master=this.context.createGain();this.master.gain.value=.1;this.master.connect(this.context.destination);}if(this.context.state==='suspended')void this.context.resume();if(this.music)this.startMusic();}
+ private startMusic():void{if(this.timer!==undefined)return;const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46];let i=0;this.timer=window.setInterval(()=>{if(!this.music||!this.context||!this.master)return;const osc=this.context.createOscillator(),gain=this.context.createGain();osc.type='sine';osc.frequency.value=notes[i++%notes.length]!;gain.gain.setValueAtTime(.0001,this.context.currentTime);gain.gain.exponentialRampToValueAtTime(.018,this.context.currentTime+.05);gain.gain.exponentialRampToValueAtTime(.0001,this.context.currentTime+.48);osc.connect(gain);gain.connect(this.master);osc.start();osc.stop(this.context.currentTime+.5);},590);}
+ toggleMusic():void{this.music=!this.music;if(!this.music&&this.timer!==undefined){clearInterval(this.timer);this.timer=undefined;}else if(this.music)this.startMusic();}
+ toggleSound():void{this.sound=!this.sound;}
+ tone(freq:number,duration=.11,wave:OscillatorType='sine'):void{if(!this.sound||!this.context||!this.master)return;const o=this.context.createOscillator(),g=this.context.createGain();o.type=wave;o.frequency.value=freq;g.gain.setValueAtTime(.0001,this.context.currentTime);g.gain.exponentialRampToValueAtTime(.13,this.context.currentTime+.012);g.gain.exponentialRampToValueAtTime(.0001,this.context.currentTime+duration);o.connect(g);g.connect(this.master);o.start();o.stop(this.context.currentTime+duration+.03);}
+ play(name:'tap'|'collect'|'complete'|'full'):void{this.tone(name==='complete'?880:name==='full'?180:name==='collect'?640:430,name==='complete'?.2:.1,name==='full'?'triangle':'sine');if(name==='complete')window.setTimeout(()=>this.tone(1174,.25),105);}
+}
+export const audioManager=new AudioManager();
+export function addSoftParticles(scene:Phaser.Scene,x:number,y:number,color=0xe4bd70):void{for(let i=0;i<9;i++){const a=Math.PI*2*i/9,dist=22+Math.random()*17;const p=scene.add.circle(x,y,2.2, color,.9);scene.tweens.add({targets:p,x:x+Math.cos(a)*dist,y:y+Math.sin(a)*dist,alpha:0,scale:.25,duration:470,ease:'Cubic.Out',onComplete:()=>p.destroy()});}}
